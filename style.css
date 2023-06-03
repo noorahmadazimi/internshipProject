@@ -7,22 +7,59 @@
     justify-content: center;
     
  }
-nav{
-    margin-top: -30px;
+.navbar{
+    background: #2c3e50;
 }
-nav a{
+.navbar-nav{
+
+margin: 0;
+padding: 0;
+text-align: center;
+
+
+}
+
+.nav-item{
+    
+    margin: 0 20px;
+    display: inline;
+
+
+}
+.nav-link{
     position: relative;
     font-family: 'Poppins',sans-serif;
-    color: #a0a0a0;
+    color: #636161;
     font-size: 18px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
 }
-
-
-nav a:hover{
-    color: #ffff;
+.active{
+    background: #ffffff;
 }
 
+
+.nav-link:hover{
+    background: #ffffff;
+    color: #000000;
+}
+
+.clock{
+    margin-left: 25%;
+}
+.aboutME {
+
+    background: #588ec4;
+
+    
+}
+.picView{
+  
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.theForm{
+    background: #588ec4 ;
+}
 

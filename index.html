@@ -15,48 +15,136 @@
 </head>
 
 <body>
-  <header id="home" class="header container p-2 col-12 col-sm-12 col-md-12 col-lg-12 mb-4 me-5 d-flex justify-content-center">
-      
-    <img src="ProjectNeeds/lajwardLogo.jpg" alt="Lajward-Logo" height="100px" width="100px" class="MyImg border border-primary img-fluid rounded-circle ms-5">
-    <h1 class="Nname h1 ps-3 col-8">Lajward-Internship Project</h1>
-</header>
-<nav class="navbar navbar-expand-sm bg-dark ">
-  <!-- Brand -->
-  <a class="navbar-brand" href="">Logo</a>
 
-  <!-- Links -->
+<!-- Header -->
+<header id="home" class="header container p-2 col-12 col-sm-12 col-md-12 col-lg-12 mb-4 me-5 d-flex justify-content-center">
+    <img src="images/lajwardLogo.jpg" alt="Lajward-Logo" height="100px" width="100px" class="MyImg border border-primary img-fluid rounded-circle ms-5">
+    <h1 class="Nname h1 ps-3 col-8 ">Lajward-Internship Project</h1>
+</header>
+
+<!-- Navbar and Menues -->
+<nav class="navbar navbar-expand-sm ">
+  
+  <div class="navbar-brand">
+    <img src="images/NA-azimi.jpg" alt="Lajward-Logo" height="50px" width="50px" class="MyImg border border-white img-fluid rounded-circle ms-5">
+  </div>
+
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#myInfo">About Me</a>
+      <a class="nav-link active rounded" href="#myInfo" >Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#Contact">Contact Me</a>
+      <a class="nav-link rounded" href="#about">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#imageGallery">Image Gallery</a>
+      <a class="nav-link rounded" href="#Contact">Contact </a>
     </li>
-    
+    <li class="nav-item">
+      <a class="nav-link rounded" href="#Gallery"> Gallery</a>
+    </li>
   </ul>
+
+  <h1 class="clock text-white ps-5" id="currentTime">Time</h1>
+
 </nav>
+
+<!-- Home First Picture -->
+<div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12  p-0" style="margin-top: -65px;">
+   <img src="images/firstHome.png" alt="Home" class="img-fluid">
+</div>
+
+ <!-- About Section -->
+<Section id="about">
+
+  <div class=" aboutME container col-10 col-sm-10 col-md-8 col-lg-8 mt-5 py-5 border rounded">
+    <div class=" col-sm-12 col-md-12 col-lg-12 d-flex">
+    <h1 class="h1 ms-2 mt-2">Hi,I'm Noor Ahmad Azimi.</h1>
+    </div>
+    <p class="p">I'm a web developer from Afghanistan. I have graduated from Software Engineering Department-Computer Science Faculty of Herat University.
+    I’m currently work as a Freelancer.
+    In my spare time I like to go to GYM, gaming and building my own projects.</p>
+    
+    </div>
+
+</Section>
+
+
+ <!-- Gallery Section -->
+<Section id="Gallery">
+
+  <div class="container my-5 py-5 "> 
+    <h1 class="h1 text-center ">Welcome to My Gallery</h1>
+    </div>
+    
+  <div class="row justify-content-center w-100 mb-3"> 
+
+    <div class="picView card col-8 col-sm-8 col-md-3 col-lg-3  m-3">
+    <img src="images/images.jpg" class=" card-img-top m-0" alt="..." height="">
+    <div class="card-body">
+      <h4 class="card-title">The Lord Name</h4>
+      <p class="card-text">A Picture With Thousands of Meaning.</p>
+      <a href="#" class="btn btn-primary">See More</a>
+    </div>
+    </div>
+    
+    <div class="picView card col-8 col-sm-8 col-md-3 col-lg-3  m-3">
+    <img src="images/1.jpg" class="card-img-top" alt="..." height="295px" width="292px">
+    <div class="card-body">
+      <h4 class="card-title">Sun Set</h4>
+      <p class="card-text">Hummmm !! Just Randomly I Uploaded it.</p>
+      <a href="#" class="btn btn-primary">See More</a>
+    </div>
+    </div>
+    
+    <div class="picView card col-8 col-sm-8 col-md-3 col-lg-3  m-3">
+    <img src="images/images (4).jpg" class="card-img-top m-0" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">Old Place</h4>
+      <p class="card-text">A Boy With Beautiful Ballon in his Hands .</p>
+      <a href="#" class="btn btn-primary">See More</a>
+    </div>
+    </div>
+
+  </div>
+
+</Section>
 
 
 
 
 
 <!-- footer  -->
+<footer id="" class="footer w-100 pt-5 border-dark mt-5" style="height: 100px; margin-top: -100px;">
 
-<div style="height: 200px; background: transparent;"></div>
-
-
-<footer id="" class="footer w-100 pt-5 border-dark " style="height: 100px; margin-top: -100px;">
-
-
+<hr>
  <p class="text-center justify-content-center">
   By Noor Ahmad Azimi
   @all-right-reserved
  </p>
+ <p id="YearAndMonth" class="text-center justify-content-center"></p>
+<hr>
 
 </footer>
+
+<!-- JavaScript Code -->
+<script>
+
+var time = document.getElementById("currentTime");
+setInterval(()=>{
+  let date = new Date();
+time.innerHTML = date.toLocaleTimeString();
+},1000);
+
+let theDate = new Date();
+var months = ["Jan","Feb","Apr","May","Jun","Jul","Agust","Seb","Oct","Nov","Dec"];
+
+let year = theDate.getFullYear();
+let month =months[theDate.getMonth()-1];
+let day = theDate.getDay();
+
+document.getElementById("YearAndMonth").innerHTML = "Current Date : "+year +" / "+month+" / "+day;
+
+</script>
 
 
 </body>
